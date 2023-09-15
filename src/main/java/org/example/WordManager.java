@@ -12,6 +12,8 @@ public class WordManager {
     }
 
     public void start() {
+
+        wordCRUD.loadFile();
         while(true) {
             int menu = selectMenu();
             System.out.println(menu);
@@ -21,6 +23,21 @@ public class WordManager {
             }
             else if(menu == 1) {
                 wordCRUD.listAll();
+            }
+            else if(menu == 2) {
+                wordCRUD.searchLevel();
+            }
+            else if(menu == 3) {
+                wordCRUD.searchItem();
+            }
+            else if(menu == 5) {
+                wordCRUD.updateItem();
+            }
+            else if(menu == 6) {
+                wordCRUD.deleteItem();
+            }
+            else if(menu == 7) {
+                wordCRUD.saveFile();
             }
         }
     }
@@ -35,7 +52,7 @@ public class WordManager {
         System.out.println("5. 단어 수정");
         System.out.println("6. 단어 삭제");
         System.out.println("7. 파일 저장");
-        System.out.println("8. 나가기");
+        System.out.println("0. 나가기");
         System.out.println("********************");
         System.out.println("=> 원하는 메뉴는? ");
         return s.nextInt();
