@@ -73,7 +73,7 @@ public class WordCRUD implements ICRUD{
     public ArrayList<Integer> listLevel(int keyword) {
         ArrayList<Integer> idlist = new ArrayList<>();
         int j = 0;
-        System.out.println("-------------------------------");
+        System.out.println("--------------------------------");
         for(int i = 0; i < list.size(); i++){
             int num = list.get(i).getLevel();
             if(num != keyword) continue;
@@ -82,7 +82,7 @@ public class WordCRUD implements ICRUD{
             idlist.add(i);
             j++;
         }
-        System.out.println("-------------------------------");
+        System.out.println("--------------------------------");
         return idlist;
     }
 
