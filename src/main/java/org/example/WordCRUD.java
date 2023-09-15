@@ -98,7 +98,8 @@ public class WordCRUD implements ICRUD{
         ArrayList<Integer> idlist = this.listAll(keyword);
         System.out.print("=> 수정할 번호 선택 : ");
         int id = s.nextInt();
-        System.out.print("=> 뜻 입력 :");
+        s.nextLine();
+        System.out.print("=> 뜻 입력 : ");
         String meaning = s.nextLine();
         Word word = list.get((int)idlist.get(id-1));
         word.setMeaning(meaning);
@@ -149,7 +150,6 @@ public class WordCRUD implements ICRUD{
         try {
             PrintWriter pr = new PrintWriter(new FileWriter("wordList.txt"));
             for(Word one : list){
-                System.out.println(one.toFileString());
                 pr.write(one.toFileString() + "\n");
             }
             pr.close();

@@ -1,6 +1,6 @@
-1|element|요소
 1|focus|초점, 집중하다
 3|intimate|친밀한, 가까운
 2|property|재산
 1|however|그러나
 3|neglect|무시하다
+2| hello|안녕하세요
